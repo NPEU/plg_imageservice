@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+
+    <name>PLG_SYSTEM_IMAGESERVICE</name>
+    <author>Andy Kirk</author>
+    <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
+    <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
+    <creationDate>February 2026</creationDate>
+    <copyright>(C) NPEU 2026</copyright>
+    <license>MIT License; see LICENSE.md</license>
+
+    <!--  The version string is recorded in the components table -->
+    <version>0.0.1</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>PLG_SYSTEM_IMAGESERVICE_XML_DESCRIPTION</description>
+
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="NPEU: plg_imageservice Update Site">https://raw.githubusercontent.com/NPEU/plg_imageservice/main/update-manifest.xml</server>
+    </updateservers>
+
+    <namespace path="src">NPEU\Plugin\System\ImageService</namespace>
+    <files>
+        <folder plugin="imageservice">src</folder>
+        <folder>services</folder>
+        <folder>language</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="upload_file_permissions"
+                    type="number"
+                    label="PLG_SYSTEMIMAGESERVICE_CONFIG_FILEPERMS_LABEL"
+                    description="PLG_SYSTEMIMAGESERVICE_CONFIG_FILEPERMS_DESC"
+                />
+                <field
+                    name="upload_file_group"
+                    type="text"
+                    label="PLG_SYSTEMIMAGESERVICE_CONFIG_FILEGRP_LABEL"
+                    description="PLG_SYSTEMIMAGESERVICE_CONFIG_FILEGRP_DESC"
+                />
+                <field
+                    name="upload_file_owner"
+                    type="text"
+                    label="PLG_SYSTEMIMAGESERVICE_CONFIG_FILEOWN_LABEL"
+                    description="PLG_SYSTEMIMAGESERVICE_CONFIG_FILEOWN_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>
