@@ -4,7 +4,7 @@ Independent image service plugin similar to plg_assets.
 
 ## Important
 
-You need to add thie following code to your /htaccess file ABOVE the default Joomla stuff after installation:
+You need to add the following code to your /htaccess file ABOVE the default Joomla stuff after installation:
 
 ```
 # ----------------------------------------------------------------------
